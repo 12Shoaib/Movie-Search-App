@@ -1,0 +1,19 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+.main_component {
+    background-color: black;
+    background: linear-gradient(rgba(85, 85, 166, 0.546) , black);
+    height: auto;
+    width: auto;
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 1.5rem
+}
+.header{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 4rem;
+}

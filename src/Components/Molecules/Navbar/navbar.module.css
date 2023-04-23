@@ -1,0 +1,30 @@
+.main_component{
+    height: 4rem;
+    color: black;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    display: flex;
+    align-items: center;
+    margin-left: 1.5rem;
+}
+.navbar_title{
+    padding: 0px;
+    margin: 0px;
+    cursor: pointer;
+}
+.routing_menu_container{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 19rem;
+
+}
+.routing_menu{
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+.routing_menu:hover {
+    background-color: rgba(0, 0, 0, 0.808);
+    color: white;
+    padding: .1rem;
+}
