@@ -19,7 +19,7 @@
 <h4> Although it was small project followed , Atomic folder structure for the best practises </h4><br/><br/>
 
 
-<h2> Deployed Link :  https://movie-search-web-app-omega.vercel.app/ </h2> 
+<h2> Deployed Link :  https://movie-search-app-taupe-five.vercel.app/ </h2> 
 <h2> Git hub Link : https://github.com/12Shoaib/Movie-search-web-app.git </h2><br/><br/>
 
 <h2> Project Screen shots </h2>
