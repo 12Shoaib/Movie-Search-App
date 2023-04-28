@@ -14,7 +14,6 @@ const Home = () => {
     const dispatch = useDispatch()
     const data = useSelector(state => state.popularMovieData)
     const { loading, error } = data
-    console.log(loading, error)
 
     useEffect(() => {
         dispatch(fetchDataRequest())
