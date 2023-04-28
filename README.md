@@ -1,3 +1,4 @@
+<h1> UPDATED DEPLOYMENT LINK : https://movie-search-app-taupe-five.vercel.app/ </h1>
 <h2> Downloading Intructions</h2>
 <h4> step 1 :  Copy the git link. </h4>
 <h4> step 2 : Now go to vs code and write the cloning command in the terminal ,  Git Clone https://github.com/12Shoaib/Movie-search-web-app.git </h4>
