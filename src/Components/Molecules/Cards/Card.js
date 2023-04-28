@@ -5,11 +5,12 @@ import { updatedResultsData } from './../../../Recoil/RecoilAtom'
 
 const Card = () => {
     const results = useRecoilValue(updatedResultsData)
-    const data = results?.data?.results || []
-    const data2 = results?.data?.data?.results || []
+    const data = results?.data?.results || []   // Initial load data
+    const data2 = results?.data?.data?.results || [] //The Search Query Data
 
     return (
         <>
+            {/* Rendering Data on Initiatl Load */}
             {data.length > 0 && data?.map((element) => <div id={element.id} className={card.main_component}>
                 <img className={card.image} src={'https://image.tmdb.org/t/p/w500/' + element.poster_path} />
                 <div className={card.card_content}>
@@ -21,6 +22,7 @@ const Card = () => {
                     </div>
                 </div>
             </div>)}
+            {/* The search data to be rendered */}
             {data2.length > 0 && data2?.map((element) => <div id={element.id} className={card.main_component}>
                 <img className={card.image} src={'https://image.tmdb.org/t/p/w500/' + element.poster_path} />
                 <div className={card.card_content}>

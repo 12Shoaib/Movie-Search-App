@@ -4,23 +4,32 @@ import { useSelector, useDispatch } from 'react-redux'
 import { fetchDataRequest } from '../../Redux/actions'
 import { updatedResultsData } from '../../Recoil/RecoilAtom'
 import home from './home.module.css'
+import Loader from '../../Components/Molecules/Loader/Loader'
 import Card from '../../Components/Molecules/Cards/Card'
 import Navbar from '../../Components/Molecules/Navbar/Navbar'
 import Search from '../../Components/Organisms/Search/Search'
-
+ 
 const Home = () => {
     const setResults = useSetRecoilState(updatedResultsData)
     const dispatch = useDispatch()
-    const popularMovies = useSelector(state => state.popularMovieData)
+    const data = useSelector(state => state.popularMovieData)
+    const {loading , error} = data
+    console.log(loading , error)
 
     useEffect(() => {
         dispatch(fetchDataRequest())
     }, [dispatch])
 
     useEffect(() => {
-        setResults(popularMovies)
-    }, [popularMovies])
+        setResults(data)
+    }, [data])
 
+    if(loading){
+        return <Loader />
+    }
+    if(error){
+        return <div className={home.error}> <h1>Something went wrong</h1> </div>
+    }
     return (
         <div className={home.main_component}>
             <div className={home.header}>
