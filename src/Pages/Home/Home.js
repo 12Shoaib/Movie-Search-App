@@ -8,13 +8,13 @@ import Loader from '../../Components/Molecules/Loader/Loader'
 import Card from '../../Components/Molecules/Cards/Card'
 import Navbar from '../../Components/Molecules/Navbar/Navbar'
 import Search from '../../Components/Organisms/Search/Search'
- 
+
 const Home = () => {
     const setResults = useSetRecoilState(updatedResultsData)
     const dispatch = useDispatch()
     const data = useSelector(state => state.popularMovieData)
-    const {loading , error} = data
-    console.log(loading , error)
+    const { loading, error } = data
+    console.log(loading, error)
 
     useEffect(() => {
         dispatch(fetchDataRequest())
@@ -24,10 +24,10 @@ const Home = () => {
         setResults(data)
     }, [data])
 
-    if(loading){
+    if (loading) {
         return <Loader />
     }
-    if(error){
+    if (error) {
         return <div className={home.error}> <h1>Something went wrong</h1> </div>
     }
     return (
